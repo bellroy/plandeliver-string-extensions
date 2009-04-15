@@ -1,0 +1,9 @@
+-----------------------------------------------------------------------
+-- String Extensions Plugin
+-----------------------------------------------------------------------
+
+The plugin extends the String class with the following methods:
+
+	* numeric?: Returns true if the string is numeric (integer or float)
+	* date?: Returns true if the string is in a date format (without checking for validity)
+	* typed: Returns the casted value of the string according to numeric? and date?
