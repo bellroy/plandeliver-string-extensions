@@ -36,7 +36,12 @@ describe String do
     end
     
     it "should parse the value with Chronic if the value is a date" do
-      "1/1/2009".typed.should be_a(Time)
+      "1/1/2009".typed.should be_a(Date)
+    end
+    
+    it "should pass in the reversed date, splitted at the dashes, with hyphens" do
+      Chronic.should_receive(:parse).with "2009-12-24"
+      "24/12/2009".typed
     end
     
     it "should return self if the value is neither numeric nor a date" do

@@ -4,7 +4,7 @@ module StringExtensions
   
   def typed
     if numeric?;  to_f
-    elsif date?;  Chronic.parse(self)
+    elsif date?;  Chronic.parse(self.split("/").reverse.join("-")).try(:to_date)
     else;         self
     end
   end
