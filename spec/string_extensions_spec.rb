@@ -47,5 +47,9 @@ describe String do
     it "should return self if the value is neither numeric nor a date" do
       "abc".typed.should == "abc"
     end
+    
+    it "should downcase the string when self is returned" do
+      "aBc".typed.should == "abc"
+    end
   end
 end
